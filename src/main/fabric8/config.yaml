@@ -2,7 +2,7 @@ apiVersion: v1
 data:
   server_port: 8080
   auth_service_baseUrl: http://oauth-server:8080
-  server_servlet_context-path: /auth/demo
+  server_servlet_context-path: /
 kind: ConfigMap
 metadata:
   name: auth-demo-config
