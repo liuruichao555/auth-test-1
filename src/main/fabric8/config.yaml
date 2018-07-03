@@ -5,3 +5,4 @@ data:
 kind: ConfigMap
 metadata:
   name: auth-demo-config
+  namespace: auth
