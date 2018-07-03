@@ -1,0 +1,8 @@
+target/
+.settings/
+/.project
+
+.idea/
+*.iml
+*.log
+.DS_Store
