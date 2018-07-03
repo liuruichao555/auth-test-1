@@ -1,0 +1,35 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: auth-demo-gateway
+  namespace: auth
+spec:
+  selector:
+    istio: ingressgateway # use istio default controller
+  servers:
+  - port:
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+    - "*"
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: auth-demo
+  namespace: auth
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - auth-demo-gateway
+  http:
+  - match:
+    - uri:
+        prefix: /auth/demo
+    route:
+    - destination:
+        host: ${project.artifactId}
+        port:
+          number: 8080
