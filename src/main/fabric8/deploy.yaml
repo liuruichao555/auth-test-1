@@ -29,6 +29,11 @@ spec:
             configMapKeyRef:
               name: auth-demo-config
               key: auth_service_baseUrl
+        - name: SERVER_SERVLET_CONTEXT-PATH
+          valueFrom:
+            configMapKeyRef:
+              name: auth-demo-config
+              key: server_servlet_context-path
         #envFrom:
         #  - configMapRef:
         #    name: auth-demo-config
