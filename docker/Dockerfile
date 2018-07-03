@@ -1,5 +1,4 @@
-FROM java:8
-FROM harbor.aishuaiche.com/library/java:8-jre
+FROM harbor.cdd.group/platform/java:8
 MAINTAINER liuruichao
 ADD ./target/test-1.jar auth-demo.jar
 
