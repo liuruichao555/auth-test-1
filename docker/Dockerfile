@@ -1,3 +1,4 @@
+FROM java:8
 FROM harbor.aishuaiche.com/library/java:8-jre
 MAINTAINER liuruichao
 ADD ./target/test-1.jar auth-demo.jar
