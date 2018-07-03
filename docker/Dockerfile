@@ -1,6 +1,6 @@
 FROM harbor.cdd.group/platform/java:8
 MAINTAINER liuruichao
-ADD ./target/test-1.jar auth-demo.jar
+ADD maven/test-1.jar auth-demo.jar
 
 ENV LANG C.UTF-8
 ENV TZ Asia/Shanghai
