@@ -22,6 +22,12 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
-        envFrom:
-          - configMapRef:
-            name: auth-demo-config
+        env:
+        - name: AUTH_SERVICE_BASEURL
+          valueFrom:
+            configMapKeyRef:
+              name: auth-demo-config
+              key: auth_service_baseUrl
+        #envFrom:
+        #  - configMapRef:
+        #    name: auth-demo-config
