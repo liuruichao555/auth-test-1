@@ -51,7 +51,7 @@ public class UserService {
         return ResponseEntity.status(500).body("Server Error");
     }
 
-    public Iterable<NameValuePair> buildFormParams(String username, String password) {
+    private Iterable<NameValuePair> buildFormParams(String username, String password) {
         List<NameValuePair> list = new ArrayList<>(5);
 
         list.add(new BasicNameValuePair("grant_type", "password"));
