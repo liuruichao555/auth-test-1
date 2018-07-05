@@ -6,7 +6,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,7 +41,6 @@ public class ResourceController {
     @PreAuthorize("hasRole('NORMAL')")
     @ResponseBody
     public String resource3() {
-        String html = "姓名：刘瑞超<br/>年龄：20<br/>";
-        return html;
+        return "姓名：刘瑞超<br/>年龄：20<br/>";
     }
 }
